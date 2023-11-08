@@ -136,3 +136,53 @@ end
 <listaSimple> ::= <valor> | <valor> <espacio> <listaSimple>
 <expresion> ::= <etiqueta> <espacio> <igual> <espacio> <lista>
 ```
+
+### 4. Defina reglas BNF para validar operaciones matemáticas
+
+**Respuesta:**
+
+```bnf
+<operacion> ::= <numero> (<espacio>)? <operador> (<espacio>)? <numero> | <numero> (<espacio>)? <operador> (<espacio>)? <operacion>
+<numero> ::= (<menos>)? <entero> | (<menos>)? <decimal>
+<entero> ::= [0-9]+
+<decimal> ::= [0-9]+ "." [0-9]+
+<operador> ::= "+" | "-" | "*" | "/" | "%" | "**"
+<espacio> ::= " " | " " <espacio>
+<menos> ::= "-"
+```
+
+### 5. Defina reglas BNF para validar sentencias de un lenguaje de programación
+
+**Respuesta:**
+
+```bnf
+<programa> ::= <sentencias> | <sentencias> <saltoLinea> <programa>
+
+<sentencias> ::= <funcion> | <asignacion> | <operacionM>
+
+<funcion> ::= <nombreFuncion> <parI> (<espacio>)? <parametros> (<espacio>)? <parD> | <impresion> | <ingreso>
+<ingreso> ::= "input" <parI> (<espacio>)? <cadena> (<espacio>)? <parD>
+<impresion> ::= "print" <parI> (<espacio>)? <valor> (<espacio>)? <parD>
+
+<asignacion> ::= <variable> (<espacio>)? <igual> (<espacio>)? <valor> | <variable> (<espacio>)? <igual> (<espacio>)? <ingreso>
+<operacionM> ::= <valorN> (<espacio>)? <operadorM> (<espacio>)? <valorN>
+
+<parametros> ::= <valor> (<espacio>)? <coma> (<espacio>)? <valor> | <valor> (<espacio>)? <coma> (<espacio>)? <parametros>
+
+<nombreFuncion> ::= [a-z]+
+<valor> ::= <valorN> | <booleano> | <variable> | <operacionM> | <cadena>
+<valorN> ::= <entero> | <flotante> | <variable>
+<entero> ::= [0-9]+
+<flotante> ::= <entero> <punto> <entero>
+<booleano> ::= "True" | "False"
+<variable> ::= [a-z]+
+<cadena> ::= "'" ([a-z] | [0-9] | [A-Z] | " " | ":")* "'"
+<operadorM> ::= "+" | "-" | "*" | "/" | "**" | "//" | "%"
+<saltoLinea> ::= "\n"
+<punto> ::= "."
+<espacio> ::= " " | " " <espacio>
+<coma> ::= ","
+<parI> ::= "("
+<parD> ::= ")"
+<igual> ::= "="
+```
