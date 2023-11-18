@@ -1,0 +1,8 @@
+# .gitignore
+
+# Ignore virtual environments in all subfolders
+**/.venv
+
+
+**.vscode
+**/__pycache__
