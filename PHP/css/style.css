@@ -1,0 +1,174 @@
+:root {
+  --background: #fdfffc;
+  --mainColor: #9d4edd;
+  --mainColorDark: #7b2cbf;
+  --textColor: #011627;
+  --buttonTextColor: #ffffff;
+  --fontFamily: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--textColor);
+  font-family: var(--fontFamily);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+body.users {
+  background-color: var(--background);
+  color: var(--textColor);
+  font-family: var(--fontFamily);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 200px 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 0;
+  background-color: var(--background);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 100px;
+  margin-right: 100px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  text-shadow: 1px 0 0 var(--mainColorDark);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 600px;
+  border: 0.1px solid rgb(193, 193, 193);
+  border-radius: 5px;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form.todo_form {
+  flex-direction: row;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+form.todo_form > div {
+  justify-content: space-between;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  border: 0.1px solid #000;
+  box-sizing: border-box;
+}
+
+input,
+button {
+  padding: 20px 10px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+form.todo_form input,
+form.todo_form button {
+  padding: 10px;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.invisible_none {
+  display: none;
+}
+
+button {
+  background-color: var(--mainColor);
+  color: var(--buttonTextColor);
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--mainColorDark);
+}
+
+p {
+  text-align: center;
+  margin: 0;
+  margin-top: 50px;
+}
+
+a {
+  color: var(--mainColor);
+}
+
+a:hover {
+  color: var(--mainColorDark);
+}
+
+table,
+td,
+th,
+tr {
+  border: 0.1px solid #000;
+  border-radius: 5px;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.table_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table button {
+  padding: 10px;
+}
