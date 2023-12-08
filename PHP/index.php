@@ -20,7 +20,7 @@ function userAuth($username, $password)
   }
 
 if (isset($_SESSION['username'])) {
-    header("location: .//home.php");
+    header("location: ./home.php");
 } elseif (isset($_POST['loginSubmit'])) {
 
     $username = $_POST['username'];
